@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Connect Four</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="connect4.css">
+		<script src="connect4.js"></script>
+	</head>
+
+	<body onload="updateBoard()">
+		<p><button class="btn" onclick="window.location.href = 'index.html'"><i class="fa fa-home"></i><br/>Home</button></p>
+		<div id="outerdiv">
+			<fieldset id="scores">
+				<p id="p1Score" class="scoreboard"></p> 
+				<p id="p2Score" class="scoreboard"></p>
+				<button onclick="resetScores()" id="resetBtn" >Reset scores</button>
+			</fieldset>
+			<div id="overText">Player 1, click to start.</div>
+			<button id="showPlayer" onclick="showPlayerNum()">Show player number</button>
+		</div>
+		<div>
+			<button onclick="replay()" id="startBtn" style="display: none"></button>
+			<canvas id="myCanvas" >blah</canvas>
+		</div>
+	</body>
+</html>

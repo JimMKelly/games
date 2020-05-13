@@ -1,0 +1,72 @@
+* {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, darkslategrey, rgb(170, 204, 243))
+}
+
+p {
+  margin: 0;
+  width: auto;
+}
+
+#startBtn {
+  margin-left: 40%;
+  width: 20%;
+}
+
+button {
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 0.3em;
+  margin-top: 0.2em;
+  margin-right: 0;
+  width: auto;
+  height: 60px;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  font-size: large;
+  font-weight: 200;
+  text-align: center;
+}
+
+button:hover{
+  color: rgb(71, 46, 139);
+  border-color: rgb(71, 46, 139);
+}
+
+button:active{
+  color: #BBBBBB;
+  border-color: #BBBBBB;
+  margin-top: 0.3em;
+}
+
+#myCanvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+}
+
+fieldset {
+  width: auto;
+  height: fit-content;
+}
+
+#outerdiv {
+  display: flex;
+  grid-gap: 20px;
+  height: fit-content;
+}
+
+#overText {
+  font-size: 30px;
+  padding: 0;
+  width: auto;
+  margin: auto;
+  text-align: center;
+  color: rgb(78, 24, 45);
+}
