@@ -5,8 +5,16 @@
   --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  margin: 0;
   background-image: linear-gradient(to bottom right, darkslategrey, rgb(170, 204, 243));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .wrapper {
