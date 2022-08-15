@@ -6,8 +6,8 @@ var p2Char = "2";
 var availChar = "A";
 var winChar = "W";
 var winner = 0;
-var p1Tot = localStorage.getItem("p1Score")
-var p2Tot = localStorage.getItem("p2Score")
+var p1Tot = localStorage.getItem("rp1Score")
+var p2Tot = localStorage.getItem("rp2Score")
 var p1Count = 0;
 var p2Count = 0;
 var showPlayer = false;
@@ -276,8 +276,8 @@ function nextTurn(cellChoice) {
 }
 
 function updateBoard() {
-	document.getElementById('p1Score').innerHTML = "Player 1: " + localStorage.getItem("p1Score");
-	document.getElementById('p2Score').innerHTML = "Player 2: " + localStorage.getItem("p2Score");
+	document.getElementById('p1Score').innerHTML = "Player 1: " + localStorage.getItem("rp1Score");
+	document.getElementById('p2Score').innerHTML = "Player 2: " + localStorage.getItem("rp2Score");
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
 	var w = board[0].length * 100;
@@ -345,15 +345,15 @@ function checkWin() {
 		if(p1Count > p2Count) {
 			p1Tot++;
 			document.getElementById("overText").innerHTML = "Player 1 wins " + p1Count + " to " + p2Count;
-			localStorage.setItem("p1Score",p1Tot);
-			document.getElementById('p1Score').innerHTML = "Player 1: " + localStorage.getItem("p1Score");
+			localStorage.setItem("rp1Score",p1Tot);
+			document.getElementById('p1Score').innerHTML = "Player 1: " + localStorage.getItem("rp1Score");
 			document.getElementById("startBtn").innerHTML = "Play again?";
 			document.getElementById("startBtn").style.display = "inline-block";
 		}else if(p2Count > p1Count) {
 			p2Tot++;
 			document.getElementById("overText").innerHTML = "Player 2 wins " + p2Count + " to " + p1Count;
-			localStorage.setItem("p2Score",p2Tot);
-			document.getElementById('p2Score').innerHTML = "Player 2: " + localStorage.getItem("p2Score");
+			localStorage.setItem("rp2Score",p2Tot);
+			document.getElementById('p2Score').innerHTML = "Player 2: " + localStorage.getItem("rp2Score");
 			document.getElementById("startBtn").innerHTML = "Play again?";
 			document.getElementById("startBtn").style.display = "inline-block";
 		} else {
@@ -448,8 +448,8 @@ function drawBoard() {
 }
 
 function resetScores() {
-	localStorage.setItem("p1Score",0);
-	localStorage.setItem("p2Score",0);
+	localStorage.setItem("rp1Score",0);
+	localStorage.setItem("rp2Score",0);
 	replay();
 }
 

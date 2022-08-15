@@ -5,8 +5,8 @@ var p1Char = "1";
 var p2Char = "2";
 var winChar = "W";
 var winner = 0;
-var p1Tot = localStorage.getItem("p1Score")
-var p2Tot = localStorage.getItem("p2Score")
+var p1Tot = localStorage.getItem("tp1Score")
+var p2Tot = localStorage.getItem("tp2Score")
 var board = [
 		[' ',' ',' '],
 		[' ',' ',' '],
@@ -23,12 +23,12 @@ function nextTurn(col) {
 			var winTxt = "Player " + winner + " wins!";
 			if(winner == 1) { 
 				p1Tot++;
-				localStorage.setItem("p1Score",p1Tot);
-				document.getElementById('p1Score').innerHTML = "Player 1: " + localStorage.getItem("p1Score");
+				localStorage.setItem("tp1Score",p1Tot);
+				document.getElementById('p1Score').innerHTML = "Player 1: " + localStorage.getItem("tp1Score");
 			}else {
 				p2Tot++;
-				localStorage.setItem("p2Score",p2Tot);
-				document.getElementById('p2Score').innerHTML = "Player 2: " + localStorage.getItem("p2Score");
+				localStorage.setItem("tp2Score",p2Tot);
+				document.getElementById('p2Score').innerHTML = "Player 2: " + localStorage.getItem("tp2Score");
 			}
 			document.getElementById("overText").innerHTML = winTxt;
 			document.getElementById("startBtn").innerHTML = "Play again?";
@@ -131,8 +131,8 @@ function getChoice(cell) {
 }
 
 function updateBoard() {
-	document.getElementById('p1Score').innerHTML = "Player 1: " + localStorage.getItem("p1Score");
-	document.getElementById('p2Score').innerHTML = "Player 2: " + localStorage.getItem("p2Score");
+	document.getElementById('p1Score').innerHTML = "Player 1: " + localStorage.getItem("tp1Score");
+	document.getElementById('p2Score').innerHTML = "Player 2: " + localStorage.getItem("tp2Score");
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
 	var w = 400;
@@ -306,8 +306,8 @@ function replay() {
 }
 
 function resetScores() {
-	localStorage.setItem("p1Score",0);
-	localStorage.setItem("p2Score",0);
+	localStorage.setItem("tp1Score",0);
+	localStorage.setItem("tp2Score",0);
 	replay();
 
 }
